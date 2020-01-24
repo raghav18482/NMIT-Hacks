@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nmit_hack/second.dart';
 import 'package:nmit_hack/third.dart';
-
+import 'package:nmit_hack/secondhalf.dart';
+import 'package:nmit_hack/merchant.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -70,27 +71,85 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
         Expanded(
         child:
-            Padding(padding: EdgeInsets.all(10.3), child: location()),),
-    Padding(padding: EdgeInsets.only(bottom :200.3 ,left:40.3,right:40.3), child:
+
+
+            Padding(padding: EdgeInsets.all(30.3), child: location()),),
+
+            Text(
+              "* FOR MERCHANT ",
+              textScaleFactor: 1,
+            ),
+
+            Padding(padding: EdgeInsets.only(bottom :30.3 ,left:40.3,right:40.3), child:
+            RaisedButton(
+              color: Colors.deepOrangeAccent,
+              textColor: Theme.of(context).primaryColorDark,
+
+              child: Text(
+                "SIGN UP",
+                textScaleFactor: 1,
+              ),
+              highlightElevation: 10.0,
+              onPressed: () {
+
+                Navigator.push(context,MaterialPageRoute(builder:(context){
+                  return merchant(' MERCHANT S DETAILS');
+                })
+                );
+              },
+            ),
+
+
+            ),
+            Padding(padding: EdgeInsets.only(bottom :30.3 ,left:40.3,right:40.3), child:
+
+               Text(
+                "* FOR USER ",
+                textScaleFactor: 1,
+              ),
+
+
+            ),
+    Padding(padding: EdgeInsets.only(bottom :10.3 ,left:40.3,right:40.3), child:
                RaisedButton(
                 color: Colors.white60,
                 textColor: Theme.of(context).primaryColorDark,
 
                 child: Text(
-                  "START",
+                  "LOGIN",
                   textScaleFactor: 1,
                 ),
                 highlightElevation: 10.0,
                 onPressed: () {
 
                   Navigator.push(context,MaterialPageRoute(builder:(context){
-                    return second('GRAB YOUR TRUCK');
+                    return second('DETAILS');
                   })
                   );
                 },
               ),
 
     ),
+            Padding(padding: EdgeInsets.only(bottom :20.3 ,left:40.3,right:40.3), child:
+            RaisedButton(
+              color: Colors.greenAccent,
+              textColor: Theme.of(context).primaryColorDark,
+
+              child: Text(
+                "SIGN UP",
+                textScaleFactor: 1,
+              ),
+              highlightElevation: 10.0,
+              onPressed: () {
+
+                Navigator.push(context,MaterialPageRoute(builder:(context){
+                  return secondhalf('DETAILS');
+                })
+                );
+              },
+            ),
+
+            ),
           ],
         ),
       ),

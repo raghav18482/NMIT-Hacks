@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nmit_hack/main.dart';
 import 'package:nmit_hack/second.dart';
 import 'dart:math';
-
-
+import 'package:nmit_hack/intro.dart';
 class third extends StatefulWidget{
   String appbars;
   third(this.appbars);
@@ -35,6 +34,7 @@ class thirdState extends State<third>{
     secondpage();
     }
     ,),
+
     ),
         body:
 
@@ -84,6 +84,7 @@ class thirdState extends State<third>{
   }
   }
 
+
 class imager extends StatelessWidget {
 @override
 Widget build(BuildContext context) {
@@ -99,12 +100,14 @@ Widget build(BuildContext context) {
 void oemer(BuildContext context) {
   var alertDialog = AlertDialog(
     title: Text("THANK YOU"),
-    content: Text("You Booking Is Confirmed"),
+    content: Text("You Booking Is Confirmed", ),backgroundColor: Colors.black,
   );
   showDialog(
       context: context,
       builder: (BuildContext context) {
         return alertDialog;
       });
+
+
 }
 

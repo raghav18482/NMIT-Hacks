@@ -3,6 +3,8 @@ import 'package:nmit_hack/main.dart';
 import 'dart:math';
 import 'package:nmit_hack/third.dart';
 
+import 'package:nmit_hack/intro.dart';
+
 class second extends StatefulWidget{
   String appbars;
   second(this.appbars);
@@ -47,6 +49,13 @@ class secondState extends State<second>{
           titlepage();
         }
         ,),
+        actions: <Widget>[ IconButton(icon:Icon(Icons.dehaze),onPressed:(){
+          Navigator.push(context, MaterialPageRoute(builder: (
+              context)
+          {
+            return intro('GRAB YOUR TRUCK');
+          }));
+        })],
       ),
           body:
           Form(
@@ -225,7 +234,7 @@ class secondState extends State<second>{
 
     Navigator.pop(context);
   }
-  String memer() {
+  memer()  {
     int hasd =generatenumber();
    String  bills = bill.text;
    String parkings = parking.text;
